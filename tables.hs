@@ -43,7 +43,7 @@ main = do
                     "csv" -> putTab tabToCsv
                     "latex" -> putTab tabToLatex
                     "html" -> putTab tabToHtml
-        (_, _, msgs) -> error $ concat msgs ++ ihelp
+        (_, _, msgs) -> error $ concat msgs ++ help
 
 -- We keep manipulating strings without side effects
 instructions = "With this simple logic program you can generate truth tables in different formats given a formula in input, formulas goes after options"
