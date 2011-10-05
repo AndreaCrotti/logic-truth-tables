@@ -1,0 +1,2 @@
+Simple haskell program that computes the logic truth table from a
+given expression.
