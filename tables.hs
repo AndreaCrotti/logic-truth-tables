@@ -26,9 +26,7 @@ import Maybe(fromJust, fromMaybe)
 
 -- FIXME fromjusts are not so nice
 
--- main :: IO ()
-main = do
-    args <- getArgs
+solve args = do
     let parsed = getOpt Permute opts args
     case parsed of
         (flags, arguments, []) ->
@@ -382,3 +380,8 @@ bin = do {
     return ((BinForm $ fromJust $ Map.lookup op stToOp) v1 v2)
     }
     <?> "error in binary operator"
+
+-- main :: IO ()
+main = do
+  args <- getArgs
+  solve args
