@@ -26,6 +26,7 @@ import Maybe(fromJust, fromMaybe)
 
 -- FIXME fromjusts are not so nice
 
+solve :: [String] -> IO()
 solve args = do
     let parsed = getOpt Permute opts args
     case parsed of
@@ -381,7 +382,7 @@ bin = do {
     }
     <?> "error in binary operator"
 
--- main :: IO ()
+main :: IO ()
 main = do
   args <- getArgs
   solve args
